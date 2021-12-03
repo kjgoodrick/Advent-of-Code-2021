@@ -9,7 +9,7 @@ class TestSubmarine(TestCase):
 
     def test_file_navigate(self):
         self.submarine.file_navigate(Path('../data/commands/test2.txt'))
-        assert self.submarine.depth == 10
+        assert self.submarine.depth == 60
         assert self.submarine.position == 15
-        assert self.submarine.depth * self.submarine.position == 150
+        assert self.submarine.depth * self.submarine.position == 900
 
