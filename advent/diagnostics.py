@@ -21,7 +21,7 @@ class Diagnostics:
 
     @staticmethod
     def bin_array_to_dec(bin_array: np.ndarray) -> int:
-        return int(np.sum(bin_array * np.array([2**i for i in range(len(bin_array))][::-1])))
+        return int(''.join(str(b) for b in bin_array), 2)
 
     @property
     def gamma_bin(self) -> np.ndarray:
