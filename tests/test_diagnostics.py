@@ -13,6 +13,12 @@ class TestDiagnostics(TestCase):
     def test_epsilon(self):
         assert self.diagnostics.epsilon == 9
 
-    def test_puzzle(self):
+    def test_puzzle1(self):
         diagnostics = Diagnostics(Path('../data/diagnostics/diagnostics3.txt'))
-        assert diagnostics.gamma * diagnostics.epsilon == 4191876
+        assert diagnostics.power_consumption == 4191876
+
+    def test_oxygen_rating(self):
+        assert self.diagnostics.oxygen_generator_rating == 23
+
+    def test_co2_rating(self):
+        assert self.diagnostics.co2_scrubber_rating == 10
