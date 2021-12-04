@@ -33,6 +33,7 @@ class Diagnostics:
 
     @property
     def epsilon(self) -> int:
+        # Epsilon is gamma with all the bits flipped
         return self.bin_array_to_dec(-self.gamma_bin + 1)
 
     @property
@@ -70,10 +71,3 @@ class Diagnostics:
     @property
     def life_support_rating(self) -> int:
         return self.oxygen_generator_rating * self.co2_scrubber_rating
-
-
-if __name__ == '__main__':
-    diag = Diagnostics(Path('../data/diagnostics/diagnostics3.txt'))
-    print(diag.power_consumption)
-    print(diag.life_support_rating)
-

@@ -36,9 +36,3 @@ class Sonar:
         # Count changes
         sign_counts = dict(zip(*np.unique(readings_sign, return_counts=True)))
         return sign_counts[1]
-
-
-if __name__ == "__main__":
-    sonar = Sonar(Path("../data/sonar/sonar1.txt"), window_size=3)
-    sonar.read_sonar()
-    print(sonar.increases)

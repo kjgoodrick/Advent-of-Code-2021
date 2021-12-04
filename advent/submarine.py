@@ -53,9 +53,3 @@ class Submarine:
                 # If we don't see a direction we recognize, raise an error
                 case _:
                     raise RuntimeError(f"Direction {command.direction} is not known.")
-
-
-if __name__ == "__main__":
-    submarine = Submarine()
-    submarine.file_navigate(Path("../data/commands/commands2.txt"))
-    print(f"Depth: {submarine.depth}, Position: {submarine.position}, Mult: {submarine.position * submarine.depth}")
