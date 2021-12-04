@@ -16,6 +16,7 @@ class TestDiagnostics(TestCase):
     def test_puzzle1(self):
         diagnostics = Diagnostics(Path('../data/diagnostics/diagnostics3.txt'))
         assert diagnostics.power_consumption == 4191876
+        assert diagnostics.life_support_rating == 3414905
 
     def test_oxygen_rating(self):
         assert self.diagnostics.oxygen_generator_rating == 23
